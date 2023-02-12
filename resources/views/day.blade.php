@@ -1,6 +1,6 @@
 
 <div
-    ondragenter="onLivewireCalendarEventDragEnter(event, '{{ $componentId }}', '{{ $day }}', '{{ $dragAndDropClasses }}');"
+{{--    ondragenter="onLivewireCalendarEventDragEnter(event, '{{ $componentId }}', '{{ $day }}', '{{ $dragAndDropClasses }}');"--}}
     ondragleave="onLivewireCalendarEventDragLeave(event, '{{ $componentId }}', '{{ $day }}', '{{ $dragAndDropClasses }}');"
     ondragover="onLivewireCalendarEventDragOver(event);"
     ondrop="onLivewireCalendarEventDrop(event, '{{ $componentId }}', '{{ $day }}', {{ $day->year }}, {{ $day->month }}, {{ $day->day }}, '{{ $dragAndDropClasses }}');"
@@ -25,7 +25,8 @@
                 </p>
                 <p class="text-xs text-gray-600 ml-4">
                     @if($events->isNotEmpty())
-                        {{ $events->count() }} {{ Str::plural('event', $events->count()) }}
+{{--                        {{ $events->count() }} {{ Str::plural('event', $events->count()) }}--}}
+                        {{ $events->count() }} {{ __(Str::plural('event', $events->count())) }}
                     @endif
                 </p>
             </div>
