@@ -5,14 +5,14 @@ from within the component and will be presented on each day depending on the dat
 
 ## Preview
 
-![preview](https://github.com/asantibanez/livewire-calendar/raw/master/preview.gif)
+![preview](https://github.com/nschmid/livewire-calendar/raw/master/preview.gif)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require asantibanez/livewire-calendar
+composer require nschmid/livewire-calendar
 ```
 
 ## Requirements
@@ -136,7 +136,7 @@ Example
 
 This will render a calendar grid.
 
-![example](https://github.com/asantibanez/livewire-calendar/raw/master/example.png)
+![example](https://github.com/nschmid/livewire-calendar/raw/master/example.png)
 
 By default, the component will render the current month. If you want to change the
 starting month, you can set the `year` and `month` props.
