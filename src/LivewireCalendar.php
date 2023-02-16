@@ -60,6 +60,7 @@ class LivewireCalendar extends Component
     public $eventClickEnabled;
 
     public $minWidth;
+    public $eventStyleClass;
 
     protected $casts = [
         'startsAt' => 'date',
@@ -84,7 +85,8 @@ class LivewireCalendar extends Component
                           $dayClickEnabled = true,
                           $eventClickEnabled = true,
                           $extras = [],
-                          $minWidth = '10rem')
+                          $minWidth = '10rem',
+                          $eventStyleClass = 'bg-white')
     {
         $this->weekStartsAt = $weekStartsAt ?? Carbon::SUNDAY;
         $this->weekEndsAt = $this->weekStartsAt == Carbon::SUNDAY
@@ -111,6 +113,7 @@ class LivewireCalendar extends Component
         $this->eventClickEnabled = $eventClickEnabled;
 
         $this->minWidth = $minWidth;
+        $this->eventStyleClass = $eventStyleClass;
 
         $this->afterMount($extras);
     }
