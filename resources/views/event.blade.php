@@ -7,12 +7,15 @@
     <p class="text-sm font-medium">
         {{ $event['title'] }}
     </p>
-    <p class="mt-0 text-xs">
-        @if(!isset($event['multiday']) || $event['multiday']!== true)
+    @if(!isset($event['multiday']) || $event['multiday'] !== true)
+        <p class="mt-0 text-xs">
             {{$event['date']->format('G:i')}} - {{$event['end']->format('G:i')}}
-        @endif
-    </p>
-    <p class="mt-2 text-xs">
-        {{ $event['description'] ?? 'No description' }}
-    </p>
+        </p>
+    @endif
+
+    @if(isset($event['description']) && strlen($event['description'] > 0))
+        <p class="mt-2 text-xs">
+            {{ $event['description'] ?? 'No description' }}
+        </p>
+    @endif
 </div>
